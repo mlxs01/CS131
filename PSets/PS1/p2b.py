@@ -11,4 +11,4 @@ q = "Peter will pass the class"
 # class. Submit a file named p2b.py.
 
 s or not(p)
-# recheck this one ^
+# recheck this one ^ DO THIS BY USING TRUTH TABLE
