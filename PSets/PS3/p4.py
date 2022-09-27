@@ -17,19 +17,10 @@ def ns(x1,x2,x3) :
         return False
 
 def c(x1,x2,x3,y1,y2,y3) :
-    if((not(x1 ^ y1 ^ x2 ^ y2 ^ x3 ^ y3) and (not(x1 or x2 or x3) and not(y1 or y2 or y3)))
-        # or ((not x1 and not y1) and (not x2 and not y2) and (x3 ^ y3)) or ((not x1 and not y1) and (not x3 and not y3) and (x2 ^ y2)) or ((not x3 and not y3) and (not x2 and not y2) and (x1 ^ y1)) 
-    ) :
-        return True
-    elif ((((x1 ^ y1) and (x2 ^ y2) and (x3 ^ y3)))\
-                and (((x1 ^ x2 ^ x3) and not(x1 and x2 and x3)) or (((y1 ^ y2 ^ y3) and not(y1 and y2 and y3)))) ): 
-        return True
-    elif (((x1 ^ y1) or (x2 ^ y2) or (x3 ^ y3)) and ((x1 ^ x2 ^ x3) and not(x1 and x2 and x3)) or (((y1 ^ y2 ^ y3) and not(y1 and y2 and y3)))) :
-        return True
-    elif ((x1 and x2 and x3) ^ (y1 and y2 and y3)) :
-        return True
-    else : 
+    if ((x1 and y1) or (x2 and y2) or (x3 and y3)) : 
         return False
+    else :
+        return True
 
 
 def isValid(a1, a2, a3, b1, b2, b3, c1, c2, c3, d1, d2, d3, e1, e2, e3, f1, f2, f3) :
